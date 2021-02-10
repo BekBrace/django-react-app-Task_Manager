@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding:0;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: rgb(5, 5, 128); 
+}
+
+.todo-title{
+  cursor:pointer;
+}
+.completed-todo { 
+  text-decoration: line-through;
+}
+.tab-list > span {
+  padding: 5px 8px;
+  border : 1px solid rgb(5, 5, 128);
+  border-radius:10px;
+  margin-right:5px;
+  cursor: pointer;
+}
+.tab-list>span.active {
+  background-color: rgb(5, 5, 128);
+  color:#fff;
+}
