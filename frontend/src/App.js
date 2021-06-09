@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Modal from "./components/Modal";
-import axios from 'axios';   // FIN TUTO : add this line after importing axios at the end of the tutorial (after installing Axios in frontend)
+import axios from 'axios';  
 
 class App extends Component {
   constructor(props) {
@@ -16,15 +16,14 @@ class App extends Component {
     };
   }
 
-  // FIN TUTO : Add componentDidMount()
+  // Add componentDidMount()
   componentDidMount() {
     this.refreshList();
   }
 
-  // FIN TUTO
-  // The refreshList() function is reusable that is called each time an API request is completed. It updates the Todo list to display the most recent list of added items.
+ 
   refreshList = () => {
-    axios   //add axios to make the get request
+    axios   //Axios to send and receive HTTP requests
       .get("http://localhost:8000/api/tasks/")
       .then(res => this.setState({ taskList: res.data }))
       .catch(err => console.log(err));
@@ -142,7 +141,7 @@ class App extends Component {
   };
 
 
-  // -I- Start by this for visual effects to viewer
+  // -I- Start by visual effects to viewer
   render() {
     return (
       <main className="content">
