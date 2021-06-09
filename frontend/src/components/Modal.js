@@ -31,15 +31,13 @@ class CustomModal extends Component {
   };
 
   // rendering modal in the custommodal class received toggle and on save as props,
-  // toggle is a function used to control the Modal’s state i.e open or close the modal
-  // onSave is a function that is called to save the edited values of the task item.
   render() {
     const { toggle, onSave } = this.props;
     return (
       <Modal isOpen={true} toggle={toggle}>
         <ModalHeader toggle={toggle}> Task Item </ModalHeader>
         <ModalBody>
-          {/* In the modalbody we can create a form for title, description, and completed ; he same fields that we defined as properties on the Todo model in the backend , in the models.py file */}
+        
           <Form>
 
             {/* 3 formgroups
